@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Employee Management Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKiaie/ADP_UserManagement.git"
+  },
+  "author": "Alex Kiaie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexKiaie/ADP_UserManagement/issues"
+  },
+  "homepage": "https://github.com/AlexKiaie/ADP_UserManagement#readme"
+}
