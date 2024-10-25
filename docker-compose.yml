@@ -1,0 +1,19 @@
+services:
+  mongodb:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+  mongo-seed:
+    container_name: seed-data
+    build: ./mongo-seed
+    depends_on:
+      - mongodb
+  adp_em:
+    container_name: adp_em
+    image: adp_em
+    build: .
+    ports:
+      - "3000:8080"
+    links:
+      - mongodb
