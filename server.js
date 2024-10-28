@@ -14,13 +14,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/employees", employeesController.list);
 
-app.get("/employeesByDepartment", employeesController.byDepartment);
-
 app.get("/employees/add", employeesController.add);
 
 app.post("/employees/create", employeesController.create);
 
 app.get("/departments", departmentsController.list);
+
+app.get("/departments/employees", departmentsController.listWithEmployees);
 
 const PORT = process.env.PORT || 8080;
 

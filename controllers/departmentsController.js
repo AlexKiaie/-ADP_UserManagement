@@ -1,12 +1,9 @@
 const db = require("../data");
 
 exports.list = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
-
-    db.Department.find(condition)
+    db.Department.find()
     .then(data => {
-        res.render('departments', {
+        res.render('departments/list', {
             departments: data,
             title: "Departments",
             header: "Department List"
@@ -18,4 +15,22 @@ exports.list = (req, res) => {
             err.message || "Some error occurred while retrieving employees."
         });
     });
-}
+};
+
+exports.listWithEmployees = (req, res) => {
+    db.Department.find()
+    .populate("Employees")
+    .then(data => {
+        res.render('departments/employees', {
+            departments: data,
+            title: "Departments and Employees",
+            header: "Department and Employees"
+        });
+    })
+    .catch(err => {
+        res.status(500).send({
+            message:
+            err.message || "Some error occurred while retrieving employees."
+        });
+    });
+};

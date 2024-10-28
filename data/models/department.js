@@ -1,6 +1,10 @@
 module.exports = mongoose => {
     var DepartmentSchema = mongoose.Schema({
-        Name: String
+        Name: String,
+        Employees: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Employee"
+        }]
     });
 
     DepartmentSchema.method("toJSON", function() {

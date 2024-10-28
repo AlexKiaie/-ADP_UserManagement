@@ -1,100 +1,60 @@
 [{
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f3"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f3" },
   "FirstName": "Lisa",
   "LastName": "Harris",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873dee"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873dee" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f4"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f4" },
   "FirstName": "Alfred",
   "LastName": "Christensen",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873df1"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873df1" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f5"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f5" },
   "FirstName": "John",
   "LastName": "Dudley",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873df1"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873df1" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f6"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f6" },
   "FirstName": "Danny",
   "LastName": "Perez",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873dee"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873dee" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f7"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f7" },
   "FirstName": "Sarah",
   "LastName": "Alvarez",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873ded"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873ded" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f8"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f8" },
   "FirstName": "Constance",
   "LastName": "Smith",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873def"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873def" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996f9"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996f9" },
   "FirstName": "Travis",
   "LastName": "Combs",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873df0"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873df0" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996fa"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996fa" },
   "FirstName": "Francisco",
   "LastName": "Willard",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873ded"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873ded" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996fb"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996fb" },
   "FirstName": "Janet",
   "LastName": "Doe",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873df1"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873df1" }
 },
 {
-  "_id": {
-    "$oid": "671fc948450126c9ae3996fc"
-  },
+  "_id": { "$oid": "671fc948450126c9ae3996fc" },
   "FirstName": "Leslie",
   "LastName": "Roche",
-  "Department": {
-    "$oid": "671fc94832d4a97b86873df0"
-  }
+  "Department": { "$oid": "671fc94832d4a97b86873df0" }
 }]

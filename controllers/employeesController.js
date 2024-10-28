@@ -2,13 +2,10 @@ const db = require("../data");
 const department = require("../data/models/department");
 
 exports.list = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
-
-    db.Employee.find(condition)
+    db.Employee.find()
     .populate("Department")
     .then(data => {
-        res.render('employee/list', {
+        res.render('employees/list', {
             employees: data,
             title: "Employee List",
             header: "Employee List"
@@ -19,30 +16,10 @@ exports.list = (req, res) => {
     });
 };
 
-exports.byDepartment = (req, res) => {
-    db.Employee.find()
-    .populate("Department")
-    .then(data => {
-        var groupedByDepartment = data.reduce((rv, x) => {
-            (rv[x.Department.Name] = rv[x.Department.Name] || []).push(x);
-            return rv; 
-        }, {});
-        
-        res.render('employee/byDepartment', {
-            employeesByDepartment: groupedByDepartment,
-            title: "Employee List By Deparment",
-            header: "Employee List By Deparment"
-        });
-    })
-    .catch(err => {
-        handleError(err, res);
-    });
-};
-
 exports.add = (req, res) => {
     db.Department.find()
     .then(data => {
-        res.render('employee/add', {
+        res.render('employees/add', {
             departments: data,
             title: "Add New Employee",
             header: "Add New Employee"
