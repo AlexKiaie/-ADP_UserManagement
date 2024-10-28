@@ -1,44 +1,41 @@
 const express = require("express");
-const db = require("./models");
+const db = require("./data/index.js");
+const config = require("./config.js");
+
+const employeesController = require("./controllers/employeesController.js");
+const departmentsController = require("./controllers/departmentsController");
 
 const app = express();
 
-app.get("/employees", (req, res) => {
-    // res.json({ message: "Welcome to Apollonia Dental Practice employee management." });
-  const title = req.query.title;
-  var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-  db.Employee.find(condition)
-    .populate("Department")
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving employees."
-      });
-    });
-});
+app.get("/employees", employeesController.list);
 
-app.get("/departments", (req, res) => {
-  // res.json({ message: "Welcome to Apollonia Dental Practice employee management." });
-  const title = req.query.title;
-  var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+app.get("/employeesByDepartment", employeesController.byDepartment);
 
-  db.Department.find(condition)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving employees."
-      });
-    });
-});
+app.get("/employees/add", employeesController.add);
+
+app.post("/employees/create", employeesController.create);
+
+app.get("/departments", departmentsController.list);
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
-});
+
+db.mongoose
+  .connect(config.dbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("Connected to the database!");
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}.`);
+    });
+  })
+  .catch(err => {
+    console.log("Cannot connect to the database!", err);
+    process.exit();
+  });

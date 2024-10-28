@@ -1,0 +1,10 @@
+<%- include('./shared/header.html') -%>
+
+<h1>Departments</h1>
+<ul id="users">
+  <% departments.forEach(function(department){ %>
+    <li><%= department.Name %></li>
+  <% }) %>
+</ul>
+
+<%- include('./shared/footer.html') -%>

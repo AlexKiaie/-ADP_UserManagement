@@ -1,0 +1,20 @@
+<%- include('../shared/header.html') -%>
+
+<h1><%= title %></h1>
+<div class="create-blog content">
+    <form action="/employees/create" method="POST">
+        <label for="FirstName">First Name:</label>
+        <input type="text" name="FirstName" id="FirstName" required>
+        <label for="LastName">Last Name:</label>
+        <input type="text" name="LastName" id="LastName">
+        <label for="DepartmentId">Department:</label>
+        <select name="DepartmentId" id="DepartmentId">
+            <% departments.forEach((department) => { %>
+                <option value="<%= department._id %>"><%= department.Name %></option>
+            <% }) %>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<%- include('../shared/footer.html') -%>

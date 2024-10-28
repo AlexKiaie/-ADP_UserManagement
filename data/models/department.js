@@ -1,8 +1,6 @@
 module.exports = mongoose => {
     var DepartmentSchema = mongoose.Schema({
-        _id: Number,
-        FirstName: String,
-        LastName: String
+        Name: String
     });
 
     DepartmentSchema.method("toJSON", function() {

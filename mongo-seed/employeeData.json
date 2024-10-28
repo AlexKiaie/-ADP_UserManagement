@@ -1,62 +1,100 @@
-[
-    {
-        "_id": 1,
-        "FirstName": "Lisa",
-        "LastName": "Harris",
-        "Department": 3
-    },
-    {
-        "_id": 2,
-        "FirstName": "Alfred",
-        "LastName": "Christensen",
-        "Department": 1
-    },
-    {
-        "_id": 3,
-        "FirstName": "John",
-        "LastName": "Dudley",
-        "Department": 1
-    },
-    {
-        "_id": 4,
-        "FirstName": "Danny",
-        "LastName": "Perez",
-        "Department": 3
-    },
-    {
-        "_id": 5,
-        "FirstName": "Sarah",
-        "LastName": "Alvarez",
-        "Department": 2
-    },
-    {
-        "_id": 6,
-        "FirstName": "Constance",
-        "LastName": "Smith",
-        "Department": 4
-    },
-    {
-        "_id": 7,
-        "FirstName": "Travis",
-        "LastName": "Combs",
-        "Department": 5
-    },
-    {
-        "_id": 8,
-        "FirstName": "Francisco",
-        "LastName": "Willard",
-        "Department": 2
-    },
-    {
-        "_id": 9,
-        "FirstName": "Janet",
-        "LastName": "Doe",
-        "Department": 1
-    },
-    {
-        "_id": 10,
-        "FirstName": "Leslie",
-        "LastName": "Roche",
-        "Department": 5
-    }
-]
+[{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f3"
+  },
+  "FirstName": "Lisa",
+  "LastName": "Harris",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873dee"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f4"
+  },
+  "FirstName": "Alfred",
+  "LastName": "Christensen",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873df1"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f5"
+  },
+  "FirstName": "John",
+  "LastName": "Dudley",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873df1"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f6"
+  },
+  "FirstName": "Danny",
+  "LastName": "Perez",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873dee"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f7"
+  },
+  "FirstName": "Sarah",
+  "LastName": "Alvarez",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873ded"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f8"
+  },
+  "FirstName": "Constance",
+  "LastName": "Smith",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873def"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996f9"
+  },
+  "FirstName": "Travis",
+  "LastName": "Combs",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873df0"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996fa"
+  },
+  "FirstName": "Francisco",
+  "LastName": "Willard",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873ded"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996fb"
+  },
+  "FirstName": "Janet",
+  "LastName": "Doe",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873df1"
+  }
+},
+{
+  "_id": {
+    "$oid": "671fc948450126c9ae3996fc"
+  },
+  "FirstName": "Leslie",
+  "LastName": "Roche",
+  "Department": {
+    "$oid": "671fc94832d4a97b86873df0"
+  }
+}]

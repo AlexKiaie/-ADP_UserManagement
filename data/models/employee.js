@@ -3,9 +3,9 @@ module.exports = mongoose => {
         FirstName: String,
         LastName: String,
         Department: {
-            type: mongoose.Schema.Types.Number,
-            ref: "Department"
-          }
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Department"
+        }
     });
 
     EmployeeSchema.method("toJSON", function() {
