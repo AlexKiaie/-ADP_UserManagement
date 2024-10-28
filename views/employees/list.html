@@ -1,13 +1,6 @@
 <%- include('../shared/header.html') -%>
 
 <h1><%= title %></h1>
-<table id="employees">
-  <th>First Name</th><th>Last Name</th><th>Department</th>
-  <% employees.forEach((employee) => { %>
-    <tr>
-      <td><%= employee.FirstName %></td><td><%= employee.LastName %></td><td><%= employee.Department?.Name %></td>
-    </tr>
-  <% }) %>
-</table>
+<%- include ('../partials/employeeList.html', { employees: employees }) %>
 
 <%- include('../shared/footer.html') -%>

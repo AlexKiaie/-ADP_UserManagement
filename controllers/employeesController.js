@@ -31,7 +31,6 @@ exports.add = (req, res) => {
 };
 
 exports.create = (req, res) => {
-    console.log(req.body);
     if (!req.body) {
         return res.status(400).send({
             message: "Data to update can not be empty!"
@@ -45,10 +44,18 @@ exports.create = (req, res) => {
             _id: req.body.DepartmentId
         }
     });
-
+    
     newEmployee.save()
     .then(result => {
-        res.redirect('/employees')
+        db.Department.findOne({ _id: req.body.DepartmentId })
+        .populate("Employees")
+        .then(dept => {
+            dept.Employees.push(result);
+            dept.save()
+            .then(result => {
+                res.redirect('/employees')
+            });
+        });
     })
     .catch(err => {
         handleError(err, res);

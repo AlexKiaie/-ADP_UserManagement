@@ -5,11 +5,7 @@
   <% departments.forEach((department) => { %>
     <li>
         <%= department.Name %>
-        <ul>
-            <% department.Employees.forEach((employee) => { %>
-                <li><%= employee.FirstName %> <%= employee.LastName %></li>
-            <% }) %>
-        </ul>
+        <%- include ('../partials/employeeList.html', { employees: department.Employees }) %>
     </li>
   <% }) %>
 </ul>
