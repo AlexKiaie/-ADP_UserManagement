@@ -21,6 +21,7 @@ body {
 ul.employeeList {
   list-style: none;
   padding: 5px 0 5px 20px;
+  margin: 5px 0;
 }
 #menu {
   width: fit-content;
