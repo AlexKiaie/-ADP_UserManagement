@@ -11,6 +11,11 @@ app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+app.get("/", (req, res) => {
+  res.render('index', {header: "ADP Home"});
+});
 
 app.get("/employees", employeesController.list);
 
@@ -25,10 +30,7 @@ app.get("/departments/employees", departmentsController.listWithEmployees);
 const PORT = process.env.PORT || 8080;
 
 db.mongoose
-  .connect(config.dbUrl, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(config.dbUrl, {})
   .then(() => {
     console.log("Connected to the database!");
     app.listen(PORT, () => {

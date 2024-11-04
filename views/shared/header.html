@@ -3,7 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title><%= title %></title>
-  <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+  <title><%= header %></title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $(".accordion > div").accordion({collapsible:true});
+      $("#menu").menu({postition: {my: "left bottom", of: "#page-header"}});
+    });
+  </script>
 </head>
 <body>
+  <div id="page-header">
+    <a href="/">Apollonia Dental Practice</a>
+    <ul id="menu">
+      <li><div>Menu</div>
+        <ul>
+          <li><a href="/employees">Employees</a></li>
+          <li><a href="/employees/add">Add Employee</a></li>
+          <li><a href="/departments">Departments</a></li>
+          <li><a href="/departments/employees">Department Employees</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="content">

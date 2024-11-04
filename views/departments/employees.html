@@ -1,13 +1,15 @@
 <%- include('../shared/header.html') -%>
 
-<h1><%= title %></h1>
-<ul id="departments">
+<h2><%= title %></h2>
+<div class="accordion" id="departments">
   <% departments.forEach((department) => { %>
-    <li>
-        <%= department.Name %>
+    <div>
+      <h3><%= department.Name %></h3>
+      <div>
         <%- include ('../partials/employeeList.html', { employees: department.Employees }) %>
-    </li>
+      </div>
+    </div>
   <% }) %>
-</ul>
+</div>
 
 <%- include('../shared/footer.html') -%>

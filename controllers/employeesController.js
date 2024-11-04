@@ -7,12 +7,12 @@ exports.list = (req, res) => {
     .then(data => {
         res.render('employees/list', {
             employees: data,
-            title: "Employee List",
-            header: "Employee List"
+            title: "Employees",
+            header: "Apollonia Dental Practice - Employees"
         });
     })
     .catch(err => {
-        handleError(err, res);
+        handleError(res, err);
     });
 };
 
@@ -22,19 +22,17 @@ exports.add = (req, res) => {
         res.render('employees/add', {
             departments: data,
             title: "Add New Employee",
-            header: "Add New Employee"
+            header: "Apollonia Dental Practice - Add New Employee"
         });
     })
     .catch(err => {
-        handleError(err, res);
+        handleError(res, err);
     });
 };
 
 exports.create = (req, res) => {
     if (!req.body) {
-        return res.status(400).send({
-            message: "Data to update can not be empty!"
-        });
+        handleError(res, {message: "No data provided to create employee!"}, 400);
     }
 
     const newEmployee = new db.Employee({
@@ -58,10 +56,10 @@ exports.create = (req, res) => {
         });
     })
     .catch(err => {
-        handleError(err, res);
+        handleError(res, err);
     });
 };
 
-const handleError = (err, res) => {
-    res.status(500).send({message: err.message});
+const handleError = (res, err, code = 500) => {
+    res.status(code).send({message: err.message});
 }

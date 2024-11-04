@@ -1,9 +1,9 @@
-<ul id="employees">
-    <% employees.forEach((employee) => { %>
-      <li><%= employee.FirstName %> <%= employee.LastName %>
-        <% if(employee.Department && employee.Department.Name && employee.Department.Name.length > 0) { %> 
-          - <%= employee.Department.Name %>
-        <% } %>
-      </li>
-    <% }) %>
-  </ul>
+<ul class="employeeList">
+  <% employees.forEach((employee) => { %>
+    <li><%= employee.FirstName %> <%= employee.LastName %>
+      <% if(employee.Department && employee.Department.Name && employee.Department.Name.length > 0) { %> 
+        - <%= employee.Department.Name %>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

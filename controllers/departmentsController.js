@@ -6,7 +6,7 @@ exports.list = (req, res) => {
         res.render('departments/list', {
             departments: data,
             title: "Departments",
-            header: "Department List"
+            header: "Apollonia Dental Practice - Department List"
         });
     })
     .catch(err => {
@@ -23,8 +23,8 @@ exports.listWithEmployees = (req, res) => {
     .then(data => {
         res.render('departments/employees', {
             departments: data,
-            title: "Departments and Employees",
-            header: "Department and Employees"
+            title: "Employees by Department",
+            header: "Apollonia Dental Practice - Employees by Department"
         });
     })
     .catch(err => {

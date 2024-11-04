@@ -1,18 +1,24 @@
 <%- include('../shared/header.html') -%>
 
-<h1><%= title %></h1>
-<div class="create-blog content">
+<h2><%= title %></h2>
+<div class="">
     <form action="/employees/create" method="POST">
-        <label for="FirstName">First Name:</label>
-        <input type="text" name="FirstName" id="FirstName" required>
-        <label for="LastName">Last Name:</label>
-        <input type="text" name="LastName" id="LastName">
-        <label for="DepartmentId">Department:</label>
-        <select name="DepartmentId" id="DepartmentId">
-            <% departments.forEach((department) => { %>
-                <option value="<%= department._id %>"><%= department.Name %></option>
-            <% }) %>
-        </select>
+        <p>
+            <label for="FirstName">First Name:</label>
+            <input type="text" name="FirstName" id="FirstName" required />
+        </p>
+        <p>
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName" id="LastName" required />
+        </p>
+        <p>
+            <label for="DepartmentId">Department:</label>
+            <select name="DepartmentId" id="DepartmentId" required>
+                <% departments.forEach((department) => { %>
+                    <option value="<%= department._id %>"><%= department.Name %></option>
+                <% }) %>
+            </select>
+        </p>
         <button type="submit">Submit</button>
     </form>
 </div>

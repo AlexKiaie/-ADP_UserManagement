@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body {
+  margin: 0;
+}
+#page-header {
+  background-color: blue;
+  padding: 25px 20px;
+}
+#page-header > a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+}
+#content {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif', serif;
+}
+h2 {
+  margin: 20px;
+}
+ul.employeeList {
+  list-style: none;
+  padding: 0 20px;
+}
+#menu {
+  width: fit-content;
+  float: right;
+  clear: both;
+}
+.ui-accordion .ui-accordion-content {
+  padding: 0;
+}
