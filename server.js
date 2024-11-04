@@ -2,8 +2,7 @@ const express = require("express");
 const db = require("./data/index.js");
 const config = require("./config.js");
 
-const employeesController = require("./controllers/employeesController.js");
-const departmentsController = require("./controllers/departmentsController");
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -13,21 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.get("/", (req, res) => {
-  res.render('index', {header: "ADP Home"});
-});
-
-app.get("/employees", employeesController.list);
-
-app.get("/employees/add", employeesController.add);
-
-app.post("/employees/create", employeesController.create);
-
-app.get("/departments", departmentsController.list);
-
-app.get("/departments/employees", departmentsController.listWithEmployees);
-
-const PORT = process.env.PORT || 8080;
+require("./routes.js")(app);
 
 db.mongoose
   .connect(config.dbUrl, {})
