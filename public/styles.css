@@ -3,7 +3,8 @@ body {
   margin: 0;
 }
 #page-header {
-  background-color: blue;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   padding: 25px 20px;
 }
 #page-header > a {
@@ -13,16 +14,13 @@ body {
 }
 #content {
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0 20px;
   font-family: 'Noto Serif', serif;
 }
-h2 {
-  margin: 20px;
-}
 ul.employeeList {
   list-style: none;
-  padding: 0 20px;
+  padding: 5px 0 5px 20px;
 }
 #menu {
   width: fit-content;
@@ -31,4 +29,11 @@ ul.employeeList {
 }
 .ui-accordion .ui-accordion-content {
   padding: 0;
+}
+#departments {
+  list-style: none;
+  padding: 5px 0 5px 20px;
+}
+#welcome-message {
+  text-align: center;
 }
